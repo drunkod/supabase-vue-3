@@ -53,7 +53,7 @@ export default {
         if (error) throw error
         src.value = URL.createObjectURL(data)
       } catch (error) {
-        console.error("Error downloading image: ", error.message)
+        console.error("Error downloading i2mage: ", error.message)
       }
     }
 
