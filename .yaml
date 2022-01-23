@@ -146,3 +146,24 @@ services:
           hide_groups_header: true
           allow:
             - admin
+
+  ## To static routes
+  - name: static
+    _comment: "static: /* -> http://10.6.4.243:80/*"
+    url: http://10.6.4.243:80/
+    routes:
+      - name: static-all
+        strip_path: true
+        paths:
+          - /
+  ## To Studio static routes
+  - name: studio
+    _comment: "studio: /* -> http://10.6.4.243:80/*"
+    host: s-studio-env-2714526.mircloud.ru
+    port: 80
+    protocol: http
+    routes:
+      - name: studio-all
+        paths:
+        - /studio
+        strip_path: true
